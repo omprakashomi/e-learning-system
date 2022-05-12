@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+<div class="box">
+  
+</div>
+
+<div class="container mb-5">
+    <a routerLink="../../course" class="btn btn-sm btn-dark"> Back</a>
+    <div class="row">
+        <div class="col-lg-7" *ngIf="courseData">
+             <div class="image-video-wrap">
+                 <figure>
+                     <ng-container *ngIf="videodisable; else videoblock" >
+                       <img src="{{courseData[0].courseImg}}" alt="courspic" class="img-fluid" style="width: 100%;">
+
+                     </ng-container>
+                     <ng-template #videoblock>
+                        <youtube-player videoId="{{courseData[0].video}}" [width]="700"  [height]="400" [startSeconds]="0" ></youtube-player>
+                     </ng-template>
+                  <div class="play-icon-box">
+                      <img (click)="changeImg()" [title]="play" [src]="videoIcon" alt="">
+                  </div>
+                 </figure>
+             </div>
+            
+           
+            <h1>{{courseData[0].courseName}}</h1>
+            <p>{{courseData[0].courseDecrpt}}</p>
+           
+
+        </div>
+        <div class="col-lg-5 text center">
+            <h1>Course Info.</h1>
+            <p class="sub">{{courseData[0].description}}
+            </p>
+           
+        </div>
+      
+        </div>
+    </div>
+

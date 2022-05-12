@@ -1,0 +1,66 @@
+<main>
+<div class="container">
+<div class="row">
+    <div class="col-6">
+        
+        
+   <mat-card>
+       <h3 class="text-center" style="color: red;">{{message}}</h3>
+    <div class="text-center">
+    <h1>Login</h1>
+    <h5>Please Enter Email and Password!</h5>
+    </div>
+<form  class="logpage" name="form" #loginform="ngForm" (ngSubmit)="loginform.valid && onSubmit(loginform)" >
+   
+    <mat-form-field appearance="fill">
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="pat@example.com"  required 
+        [pattern]="emailRegex"
+         name="email"
+         id="email" 
+         #email="ngModel"
+         [(ngModel)]="model.email"
+         [ngClass]="{'invalid.textbox':loginform.submitted && !email.valid}"
+        >
+
+   
+        
+    </mat-form-field>
+    <div *ngIf="loginform.submitted &&email.errors?.pattern">
+        <label class="validation-message">Invalid Email address.</label>
+    </div>
+    
+    
+
+<!-- <mat-error *ngIf="userName.invalid">Please Enter Username</mat-error> -->
+
+    <mat-form-field appearance="fill">
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'"
+        name="password"
+       id="password"
+       #password="ngModel"
+       minlength="6"  
+       required
+      [(ngModel)]="model.password"
+      [ngClass]="{'invalid.textbox':loginform.submitted && !password.valid}">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+    
+</mat-form-field>
+<div *ngIf="loginform.submitted &&password.errors?.minlenght">
+    <label class="validation-message">Minimum 6 characters ..</label>
+</div>
+
+<button mat-raised-button  type="submit" >Sign in</button>
+<h5>Don't have account ?<a routerLink="/signup">Sign-up</a></h5>
+</form>
+
+</mat-card>
+</div>
+</div>
+</div>
+</main>
+
+

@@ -1,0 +1,113 @@
+<app-navbar></app-navbar>
+
+<br>
+<br>
+<br>
+<div class="banner">
+    <div class="content">
+        <span class="text">E-LEARNING</span> <br>
+        <h2 >STUDENTS FREE COURSES</h2><br><br>
+    <a routerLink="/course" class="animate__animated animate__bounceInLeft" style="animation-delay: 1s;">Start Now<i class="bi bi-arrow-right"> </i> </a>
+</div>
+</div>
+<div class="container mt-5 mb-5">
+
+    <h1 class="text-center animate__animated animate__fadeInLeft" style="font-size: 30px;animation-delay: 1s;">How to Get Free Courses</h1>
+    <div class="row mt-5">
+        <div class="col-lg-4 mt-2">
+            <div class="stepbox" routerLink="/course" style="text-decoration: none;">
+            <h2>1</h2>
+         
+        </div>
+        </div>
+
+        <div class="col-lg-4 mt-2">
+        <div class="stepbox">
+            <h2>2</h2>
+            
+            </div>
+        </div>
+
+        <div class="col-lg-4 mt-2">
+            <div class="stepbox">
+            <h2>3</h2>
+            
+        </div>
+        </div>
+
+
+    </div>
+
+<!-- <course> -->
+
+    <div class="row ">
+        <div class="col-lg-4">
+            
+            <div class="card">
+                <img src="https://www.softnetbd.com/wp-content/uploads/2019/03/Online-Course.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title">Online Courses</h3>
+                     
+                    <p class="card-text">This is only one platform that provide free online learnig metarial and lots of courses here you can learn.  </p>
+                
+                </div>
+              </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card " >
+                <img src="https://www.nsgacademy.in/images/backgrounds/teacher.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title">Expert Teachers</h3>
+                      
+                    <p class="card-text">If You have register in this portal then you will meet good and experiance Teacher and You will learn a lot..</p>
+                  
+                </div>
+              </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+                <img src="https://image.flaticon.com/icons/png/512/417/417754.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title">Community</h3>
+                     
+                    <p class="card-text">There are our Community if you have any doubt and Quries you can ask and you can send the message .</p>
+                  
+                </div>
+              </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+<br>
+<br>
+<div class="container mt-4 mb-4">
+    <h1 class="text-center mb-3" style="font-size: 30px;">Explore the Course </h1>
+    <h3  class="text-center">We Are Focus on Our Learning Metarial </h3>
+    <br>
+    <div class="row">
+        <div class="col-lg-3 mt-3" *ngFor="let cd of course; index as i;">
+            <div class="foodbox" *ngIf="i<=7">
+                <img src="{{cd.courseImg}}" alt="food" [routerLink]="['/course',cd.id]" >
+                <h1>{{cd.courseName}}</h1>
+                <star-rating
+                 [value]="cd.stars"
+                  [totalstars]="5" 
+                  checkedcolor="red" 
+                  uncheckedcolor="black" 
+                  size="24px" 
+                  [readonly]="true" 
+                 ></star-rating>
+              
+            </div>
+        </div>
+    </div>
+   <a routerLink="/course" class="viewport">View More<i class="bi bi-arrow-right"></i></a>
+
+
+   
+</div>
+<br><br>
+<app-footer></app-footer>

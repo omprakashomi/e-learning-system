@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@600&display=swap');
+main{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(216, 212, 212);
+    
+    
+}
+
+.container{
+  width: 100%;
+  margin: 0 auto;
+}
+.regpage{
+    max-width: 400px;
+    margin: 20px auto;
+   
+    
+}
+
+mat-form-field
+{
+    width: 100%;
+   
+    padding-left: 10px;
+}
+button{
+    margin-top: 20px;
+    padding: 8px;
+    width:100%;
+    background-color:rgb(193, 236, 185);
+    color: rgb(59, 65, 61);
+    font-size: 18px;
+    font-family: 'Roboto Serif';
+
+}
+mat-label{
+    font-weight: bold;
+}
+
+mat-card{
+    border:none;
+    width: 500px;
+    padding: 40px;
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(159, 167, 161);
+    background: linear-gradient(60deg,rgb(116, 119, 117),rgb(82, 61, 61),100%);
+}
+h1{
+  font-family: 'Roboto Serif';
+  font-weight: 800;
+ 
+  font-weight:bold;
+}
+h5{
+    font-family: 'Roboto Serif';
+   text-align: center;
+    color: white;
+}

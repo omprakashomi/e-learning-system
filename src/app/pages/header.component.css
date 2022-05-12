@@ -1,0 +1,21 @@
+
+ 
+ 
+  input{
+   
+    height: 50px;
+    font-size: 20px;
+    border-radius: 20px;
+    
+
+  }
+  .btn{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .btn:hover{
+    background-color: transparent;
+    color: var(--primary-color);
+  }
+ 
+   

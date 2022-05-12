@@ -1,0 +1,57 @@
+<app-navbar></app-navbar>
+<br><br><br><br><br>
+<div class="container mt-3">
+    <br>
+    <h1  class="text-center mb-3">Feel free to ask anything </h1>
+    <br><br>
+    <div class="row">
+        <div class="col-lg-6">
+            
+            
+    <form [formGroup]="quriesform" (ngSubmit)="onSubmitQuries()" >
+       
+            <div class="input-group mb-3 ">
+                <input type="text" id="firstname" class="form-control" placeholder="Enter First Name" formControlName="firstname">
+            </div>
+            <div class="input-group mb-3 ">
+               <input type="text" id="lastname" class="form-control" placeholder="Enter Last Name" formControlName="lastname">
+           </div>
+           <div class="input-group mb-3">
+               <input type="text" id="email" class="form-control" placeholder="Enter Email Id" formControlName="email">
+   
+           </div>
+           <div class="input-group mb-3">
+               <input type="text" id="phone" class="form-control" placeholder="Enter Mobile Number" formControlName="phone">
+               
+           </div>
+           <div class="input-group mb-3">
+            
+            <textarea name="Quries" id="quries" class="form-control" rows="3" required="required" placeholder="Enter Your Quries"
+            formControlName="quries" ></textarea>
+            
+            
+        </div>
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn  btn-dark p-2">Sent Message</button>
+            </div>
+            </form>
+            <h2>{{message}}</h2>
+        </div>
+    
+
+        <div class="col-lg-6">
+            
+           
+             <img src="../../../assets/contacts2.jpg" alt="">
+           
+            
+        </div>
+    </div>
+   
+   
+   
+
+
+    
+   </div>
+   

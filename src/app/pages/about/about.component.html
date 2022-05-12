@@ -1,0 +1,110 @@
+<app-navbar> </app-navbar>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container mt-5">
+    <h1 class="text-center">ABOUT US</h1>
+    <div class="row">
+     
+        <div class="col-md-6 mt-5">
+            <div class="pray">
+              
+            </div>
+        </div>
+        <div class="col-md-6 mt-5">
+            <div class="panel text-left">
+                <h1>Students E-Learing</h1>
+                <p class="pt-4">
+                    E-learning, also referred to as online learning or electronic learning,
+                     is the acquisition of knowledge which takes place through 
+                     electronic technologies and media. In simple language,
+                      e-learning is defined as “learning that is enabled electronically”. 
+                      Typically, e-learning is conducted on the Internet, where students 
+                      can access their learning materials online at any place and time.
+                       E-Learning most often takes place in the form of online courses, 
+                       online degrees, or online programs. There are many e-learning 
+                       examples out there, and we’ve covered those in greater detail in our
+                        previous articles.
+                </p>
+            </div>
+        </div>
+
+    </div>
+     </div>
+
+<br>
+<br>
+<div class="container mt-5">
+          <div class="cover">
+              <div class="content text-center">
+                  <h1>SOME FEATUERS HERE</h1>
+                  <h4>
+                      In this Learning portal you will have to meet a Experiance Teacher and Good Community.
+                  </h4>
+              </div>
+          </div>
+          <br>
+          <br>
+        <div class="row ">
+            <div class="col-lg-4 mb-3">
+                
+                <div class="card">
+                    <img src="https://www.softnetbd.com/wp-content/uploads/2019/03/Online-Course.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title">Online Courses</h3>
+                     
+                      <p class="card-text">This is only one platform that provide free online learnig metarial and lots of courses here you can learn.  </p>
+                    
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 mb-3">
+                <div class="card" >
+                    <img src="https://www.nsgacademy.in/images/backgrounds/teacher.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title">Expert Teachers</h3>
+                      
+                      <p class="card-text">If You have register in this portal then you will meet good and experiance Teacher and You will learn a lot..</p>
+                      
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 mb-3">
+                <div class="card ">
+                    <img src="https://image.flaticon.com/icons/png/512/417/417754.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title">Community</h3>
+                     
+                      <p class="card-text">There are our Community if you have any doubt and Quries you can ask and you can send the message .</p>
+                      
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+ <br>
+
+    <div class="row">
+        <h1 class="text-center mt-5" >MEAT OUR TEAM</h1>
+        <br>
+        <div class="col-lg-3 mt-3" *ngFor="let team of teamDetails; index as i">
+            <div class="card text-center" style=" background-color: rgb(236, 226, 214); ">
+                <img src="{{team.image}}" class="rounded-circle"alt="...">
+                <div class="card-body">
+                  <h2>{{team.name}}</h2>
+                  <h3>{{team.designation}}</h3>
+                 
+                </div>
+              </div>
+        </div>
+       
+    </div>
+
+      </div>
+      <br>
+      <br>
+     
+ <app-footer></app-footer>
+

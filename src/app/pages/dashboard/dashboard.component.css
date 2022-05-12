@@ -1,0 +1,41 @@
+.sidebar{
+    height:100vh;
+    background:rgb(105, 67, 67);
+    color:white;
+    
+}
+
+table{
+    margin-left: 100px;
+    border: 1px solid black;
+    width: 60%;
+   
+}
+table tbody{
+    text-align: center;
+}
+
+.mat-button{
+    font-size:17px;
+}
+.box{
+   width: 80%;
+}
+
+mat-nav-list {
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top: 10px;
+}
+
+mat-nav-list button {
+    margin-left: 15px;
+    margin-top: 10px;
+ 
+}
+mat-nav-list a{
+    margin-top: 10px;
+}
+mat-nav-list i{
+    padding-right: 5px;
+}

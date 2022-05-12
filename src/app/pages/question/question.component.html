@@ -1,0 +1,73 @@
+
+<br>
+<br>
+<div class="container mt-5">
+    <div class="card">
+        <div class="d-flex justify-content-between p-3">
+            <div class="image">
+                <img src="../../../assets/techs2.png" alt="logo" width="90">
+            </div>
+            <div class="quize-header">
+            <h1 style="font-family: cursive;">Angular & TypeScript Quize</h1>
+            <span style="font-style: italic;">Welcome {{name}} </span>
+            </div>
+        </div>
+
+      <ng-container *ngIf="!isQuizeComplet">
+        <div class="d-flex justify-content-around py-3">
+            <div class="score">
+                <h5 class="fw-bold">{{points}} Point</h5>
+            </div>
+            <div class="quetion-remain">
+                <span style="font-style: italic;">Question {{currentQuetions+1}} of{{questions.length}} </span>
+            </div>
+            <div class="timer">
+                <h5  class="fw-bold">{{counter}} Sec <i class="bi-alarm" style="font-size: 1rem;"></i></h5> 
+            </div>
+        </div>
+        <div class="progress mb-3">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [ngStyle]="{'width':progress+'%'}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+
+          <div class="question">
+              <div class="card">
+                  <h3>{{questions[currentQuetions].questionText}}</h3>
+              </div>
+          </div>
+        <div class="options">
+            <ol *ngFor="let ans of questions[currentQuetions].option">
+                <li (click)="answer(currentQuetions+1,ans)">
+                    <div appChangeBg [isCorrect]="ans.isCorrect" class="card">
+                       {{ans.text}}
+                    </div>
+                </li >
+               
+            </ol>
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <button class="btn" (click)="privouseQuestion()"  [disabled]="currentQuetions===0"><i class="bi text-primary bi-chevron-left bi-3x"></i></button>
+            <button class="btn" (click)="resetQuize()" > <i class="bi bi-arrow-clockwise" ></i></button>
+            <button class="btn" (click)="nextQuestion()"><i class="bi text-primary bi-chevron-right bi-3x" ></i></button>
+            
+
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="isQuizeComplet">
+       <div class="row d-flex justify-content-between">
+           <img src="https://clipart.info/images/ccovers/1547492564Congratulations-image-free-party.jpg" alt="Image"
+           style="width:50%;">
+        <div class="result text-center col-md-6 col-sm-12">
+            <h2>Congratulations!! <br>You have completed the Quize. <br> Below is your Result:</h2>
+
+            <p>Total Question Attempts:{{questions.length}}</p>
+            <p>Total Correct Answered:{{correctAnswer}}</p>
+            <p>Total Wrong  Answered: {{incorrectAns}}</p>
+            <p>Your Score:{{points}} Points </p>
+        </div>
+       </div>
+      </ng-container>
+     </div>
+
+</div>

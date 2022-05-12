@@ -1,0 +1,51 @@
+
+<app-navbar></app-navbar>
+<br>
+<br><br>
+<div class="container">
+
+
+    <div class="box">
+        
+    
+        <div class="row">
+        <div class="col-lg-5"><h1 class="text-center">Learn Something.</h1><app-header></app-header></div>
+    </div>
+    </div>
+   
+</div>
+
+
+
+<div class="container mt-4 mb-4">
+    
+  
+    
+    <div class="row">
+        <div class="col-lg-3 mt-3" *ngFor="let cd of course; index as i;">
+            <div class="foodbox mt-3 mb-3">
+                <img src="{{cd.courseImg}}" alt="courses" [routerLink]="['/course',cd.id]" >
+                <h1>{{cd.courseName}}</h1>
+                
+                <p>{{cd.coursePrice}}</p>
+                <star-rating
+                 [value]="cd.stars"
+                  [totalstars]="5" 
+                  checkedcolor="red" 
+                  uncheckedcolor="black" 
+                  size="24px" 
+                  [readonly]="true" 
+                 ></star-rating>
+                <br>
+
+
+                 
+                <a class="btn" style="margin-left: 0px; font-weight: bold;" routerLink="/welcome">Start-Quiz</a>
+                
+                <a class="btn" style="margin-left: 70px; font-weight: bold;" [routerLink]="['/course',cd.id]">Start-Learn</a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <app-footer></app-footer>
+
